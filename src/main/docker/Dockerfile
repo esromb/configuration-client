@@ -6,7 +6,7 @@ VOLUME /tmp
 #add openssh for container
 #RUN apk --update add openssh  
 #generate public key
-RUN ssh-keygen -t rsa -f /root/.ssh/id_rsa -q -P "adpadp5800"
+RUN ssh-keygen -t rsa -f /root/.ssh/id_rsa -q -P "testtest"
 #add bitbucket in known_hosts
 RUN ssh-keyscan -t rsa -p 80  bitbucket.org >> ~/.ssh/known_hosts
 ADD configuration-client-0.0.1-SNAPSHOT.jar app.jar
